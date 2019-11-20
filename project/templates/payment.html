@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<body>
+        <header class="header" id="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__fixed">
+                            <div class="header__center">
+                                <div class="header__logo" data-scroll="#intro">Hotel</div>
+                                <a class="nav__link" href="#" data-scroll="#about">Номер -Оплата-</a>
+        
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </header><br><br><br><br><br><br>
+<form id="formID" class="formular" method="get" action="http://localhost:8888/payment">
+    <h1>Информация о бронировании:</h1>
+    <table class="table2">
+        <tr><th>Категория номера</th>
+            <th>Количество гостей</th>
+            <th>Количество комнат</th></tr>    
+        <tr>
+            <td>{{info[0]}}</td>
+            <td>{{info[1]}}</td>
+            <td>{{info[2]}}</td>
+        </tr>
+    </table>
+    
+    <h1>Дополнительные услуги:</h1> 
+    <table class="table3">
+            <tr><th>Трансфер из аэропорта до отеля</th>
+                <th>Трансфер из отеля до аэропорта</th>
+                <th>Бассейн</th>
+                <th>Питание (включает в себя обед и ужин)</th>
+                <th>Фитнес</th>
+                <th>Бар</th>
+            </tr>
+            <tr>
+                <td>{{info[5]}}</td>
+                <td>{{info[6]}}</td>
+                <td>{{info[7]}}</td>
+                <td>{{info[8]}}</td>
+                <td>{{info[9]}}</td>
+                <td>{{info[10]}}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+    <h1>Количество посещений : </h1>
+   <h2>{{history}}</h2>
+    <br>
+    <br>
+    <h1>Прайс-лист</h1>
+    <p class="text_vp">Стоимость проживания:</p>
+    <table class="table4">
+        <tr><th>{{cost[0][0]}}</th>
+            <th>{{cost[1][0]}}</th>
+            <th>{{cost[2][0]}}</th>
+            <th>{{cost[3][0]}}</th>
+            <th>{{cost[4][0]}}</th>
+        </tr>
+        <tr>
+            <td>{{cost[0][1]}} руб/сут</td>
+            <td>{{cost[1][1]}} руб/сут</td>
+            <td>{{cost[2][1]}} руб/сут</td>
+            <td>{{cost[3][1]}} руб/сут</td>
+            <td>{{cost[4][1]}} руб/сут</td>
+        </tr>
+    </table>
+
+    <p class="text_vp">Стоимость дополнительных услуг:</p> 
+    <table class="table4">
+        <tr><th>{{cost[5][0]}}</th>
+            <th>{{cost[6][0]}}</th>
+            <th>{{cost[7][0]}}</th>
+            <th>{{cost[8][0]}}</th>
+            <th>{{cost[9][0]}}</th>
+            <th>{{cost[10][0]}}</th>
+        </tr>
+        <tr>
+            <td>{{cost[5][1]}} руб</td>
+            <td>{{cost[6][1]}} руб</td>
+            <td>{{cost[7][1]}} руб</td>
+            <td>{{cost[8][1]}} руб/сут</td>
+            <td>{{cost[9][1]}} руб/сут</td>
+            <td>{{cost[10][1]}} руб/сут</td>
+        </tr>
+        </table>
+    <br>
+    <p class="text_vp" >Скидки в зависимости от количества посещений нашего отеля:</p> 
+    <table class="table4">
+            <tr><th>2 раза</th>
+                <th>3 раза</th>
+                <th>В пределах от 3 до 10 раз</th>
+                <th>Более 10 раз</th>
+            </tr>
+            <tr>
+                <td>3%</td>
+                <td>5%</td>
+                <td>7%</td>
+                <td>10%</td>
+            </tr>
+        </table>
+    <br>
+    <div class="money">
+    <h1>Оплата за проживание</h1>
+    <p class="text_vp" >Общая сумма (включая дополнительные услуги): </p> 
+    {{pay}}={{sum}}
+    <br>
+    <br>
+    <input class="btn_oplata" type="submit" value = "Оплатить">
+<!--    <input class="btn_opl_b" type="submit" value = "Назад">-->
+<!--    <a class="btn_opl_b">Назад</a>-->
+    </div>
+</form>
+</body>
+</html>

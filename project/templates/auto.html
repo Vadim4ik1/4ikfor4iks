@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<body class="back1">
+        <ul class="body_slides">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+    <form id="formID" class="formular" method="post" action="http://localhost:8888/autoion">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__fixed">
+                    <div class="header__center">
+                        <div class="header__logo" data-scroll="#intro">Hotel</div>
+                        <a class="nav__link" href="#" data-scroll="#about">Выбор автомобиля</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <input type="submit" class="btn_auuto" value="Не выбирать авто">
+
+    <div class="auto">
+            <div id="column-1">
+<img src="{{ static_url('logo/ford.jpg') }}">
+        <p> Марка : Ford</p>
+        <p> Модель : Focus</p>
+        <p> Цвет : Белый</p>
+        <p> Кол-во мест : 5</p>
+        <p> Мощность : 150 л.с.</p>
+        <p> Комлепктация : Titanium</p>
+        <p> Класс авто : Стандарт</p>
+        <p> Цена аренды : 1500 р./день</p>
+        <input type="submit" class="btn_auto" value="Выбрать авто" formaction="http://localhost:8888/basic_auto">
+
+    </div></div>
+
+
+    <div class="auto">
+            <div id="column-2">
+                    <img src="{{ static_url('logo/bmw.jpg') }}">
+
+        <p> Марка : BMW</p>
+        <p> Модель : X5</p>
+        <p> Цвет : Черный</p>
+        <p> Кол-во мест : 5</p>
+        <p> Мощность : 240 л.с.</p>
+        <p> Комлепктация : Базовая</p>
+        <p> Класс авто : Бизнес</p>
+        <p> Цена аренды : 3000 р./день</p>
+        <input type="submit" class="btn_auto" value="Выбрать авто" formaction="http://localhost:8888/sred_auto">
+
+    </div></div>
+
+    <div class="auto">
+            <div id="column-3">
+                    <img src="{{ static_url('logo/cadillac.jpg') }}">
+
+        <p> Марка : Cadillac</p>
+        <p> Модель : Escalade</p>
+        <p> Цвет : Черный</p>
+        <p> Кол-во мест : 7</p>
+        <p> Мощность : 380 л.с.</p>
+        <p> Комлепктация : Platinum</p>
+        <p> Класс авто : Люкс</p>
+        <p> Цена аренды : 4000 р./день</p>
+        <input type="submit" class="btn_auto" value="Выбрать авто" formaction="http://localhost:8888/pov_auto">
+
+    </div></div>
+</form>
+</body>

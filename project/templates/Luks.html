@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<body>
+        <header class="header1" id="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__logo" data-scroll="#intro">Номера</div>
+            
+                        <nav class="nav" id="nav">
+                            <a class="nav__link" href="{{('Econom')}}" >ЭКОНОМ</a>
+                            <a class="nav__link" href="{{('Standart')}}" >СТАНДАРТ</a>
+                            <a class="nav__link" href="{{('Komfort')}}" >КОМФОРТ</a>
+                            <a class="nav__link" href="{{('Luks')}}">ЛЮКС</a>
+                            <a class="nav__link" href="{{('President')}}">ПРЕЗИДЕНТСКИЙ</a>
+                            <a class="nav__link" href="{{(' ')}}" ></a>
+                            <a class="nav__link" href="{{(' ')}}" ></a>
+                            <a class="nav__link" href="{{('/')}}" >  На главную  </a>
+                        </nav>
+            
+                        <button class="nav-toggle" id="nav_toggle" type="button">
+                            <span class="nav-toggle__item">Menu</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+    <br><br><br><br><br>
+    <div class='slider__18'>
+        <div class='slide__19'></div>
+        <div class='slide__20'></div>
+        <div class='slide__21'></div>
+        <div class='slide__22'></div>
+        <div class='slide__23'></div>
+    </div>
+
+    <h3>Просторный, светлый номер отличается элегантным оформлением в светло-бежевых спокойных тонах, качественной отделкой и прекрасным видом на район города.</h3>
+    <h3>Площадь номера позволяет комфортно разместиться на длительный срок. Номер "Люкс" - отличное решение для деловой поездки и комфортного отдыха, традиционно высокое качества.</h3>
+    <h3>Цена : 5000р./ночь</h3>
+    <h2>В стоимость номера входит : </h2>
+
+        <div class="text_vkl">
+            <ul>
+                <li>Безлимитный высокоскоростной Wi-Fi Интернет</li>
+                <li>Завтрак "Шведский стол" с широкой линейкой европейских блюд с 06.30 до 10.30</li>
+                <li>Бесплатная парковка</li>
+                <li>Посещение 5D – кинотеатра </li>
+                <li>Приветственная вода в номере</li>
+                <li>Разовое посещение фитнес-клуба премиум класса</li>
+            </ul>
+        </div>
+        <img style="margin-left:630px;" src="{{ static_url('logo/Luks.jpg') }}">
+        <br>
+
+        <a class="btn2" href="{{('/')}}" >Назад</a>
+        <a class="btn3" href="{{('booking')}}" >Забронировать номер</a>
+
+        <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+        <!--         </section>-->
+</body>
+
+</html>

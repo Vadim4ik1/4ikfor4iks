@@ -1,0 +1,192 @@
+  <!DOCTYPE html>
+<html lang="en">
+        <head>
+    
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+                <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+            
+                <title>Hotel</title>
+            </head>>
+
+<body>
+        <header class="header1" id="header">
+                <form id="formID" class="formular" method="post" action="http://localhost:8888/allrooms">
+                    <div class="container">
+                        <div class="header__inner">
+                            <div class="header__logo" data-scroll="#intro"><a href="{{('admin')}}"
+                                    class="nav__link">Адм.Панель</a></div>           
+                            <ul class="nav">
+                                <li><a href="#">Гости</a>
+                                    <ul>
+                                        <li> </li>
+        
+                                        <li><a href="#"><input type="submit" class="nav__link1"
+                                                    value="ГОСТИ,ПРОЖИВАЮЩИЕ В ОТЕЛЕ"
+                                                    formaction="http://localhost:8888/inguests">
+                                            </a></li>
+                                        <li><input type="submit" class="nav__link1" value="АРХИВ ГОСТЕЙ"
+                                                formaction="http://localhost:8888/allguests">
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a>Бронирование</a>
+                                    <ul>
+                                        <li><a href="{{('booking')}}">Забронировать номер</a></li>
+                                        <li><input type="submit" class="nav__link1" value="ПОДТВЕРЖДЕНИЕ БРОНИ"
+                                                formaction="http://localhost:8888/confirmation">
+                                            </a>
+        
+                                        </li>
+                                        <li>
+                                            <a href="{{('dopservices')}}"> Добавление услуг в номер </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{('booking')}}">Номера</a>
+                                    <ul>
+                                        <li><input type="submit" class="nav__link1" value="ЗАНЯТЫЕ НОМЕРА"
+                                                formaction="http://localhost:8888/busyrooms"></li>
+                                        <li> <input type="submit" class="nav__link1" value="СВОБОДНЫЕ НОМЕРА"
+                                                formaction="http://localhost:8888/allrooms"></li>
+                                </li>
+                                <li>
+                                    <a href="{{('dopservices')}}"> Добавление услуг в номер </a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li><a href="#">Услуги</a>
+                                <ul>
+                                    <li>
+                                        <a href="{{('dopservices')}}">Просмотр услуг</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{('services')}}">Изменение стоимости услуг</a>
+                                    </li>
+                            </li>
+                            </ul>
+                            <li><a href="#">Неисправность</a>
+                                <ul>
+                                        <li> <a href="{{('crash')}}">Заявка о неисправности</a></li>      
+                                    <li><input type="submit" class="nav__link1" value="НОМЕРА C НЕИСПРАВНОСТЯМИ"
+                                            formaction="http://localhost:8888/crashrooms"></li>
+                                    <li> <input type="submit" class="nav__link1" value="ВЫБОР РЕМОНТНИКА НЕИСПВ."
+                                            formaction="http://localhost:8888/crashconfirmation"></li>
+                                    <li><input type="submit" class="nav__link1" value="ПРИЕМ РАБОТ"
+                                            formaction="http://localhost:8888/pri"></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{('statistic')}}">Статистика</a></li>
+                            <li><a href="{{('/')}}">Выйти</a></li>
+                            </ul>
+                            <button class="nav-toggle" id="nav_toggle" type="button">
+                                <span class="nav-toggle__item">Menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </header>
+    <script src="https://www.google.com/jsapi"></script>
+    <!-- <script>
+        google.load("visualization", "1", {
+            packages: ["corechart"]
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Газ', 'Объём'],
+                ['Мужчины', 60.00],
+                ['Женщины', 40.00],
+            ]);
+            var options = {
+                title: 'Женщины/мужчины',
+                is3D: true,
+                //     pieResidueSliceLabel: 'Остальное'
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('air'));
+            chart.draw(data, options);
+        }
+    </script> -->
+
+    <script>
+        google.load("visualization", "1", {
+            packages: ["corechart"]
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Месяц', ''],
+                ['Январь', 5000],
+                ['Февраль', 15000],
+                ['Март', 10000],
+                ['Апрель', 50000],
+                ['Май', 35000],
+                ['Июнь', 60000],
+                ['Июль', 0],
+                ['Август', 0],
+                ['Сентябрь', 0],
+                ['Октябрь', 0],
+                ['Ноябрь',0],
+                ['Декабрь', 0],
+
+            ]);
+            var options = {
+                title: 'Прибыль',
+                hAxis: {
+                    title: 'Месяц'
+                },
+                vAxis: {
+                    title: 'Тыс.рублей'
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+            chart.draw(data, options);
+        }
+    </script>
+      <script>
+        google.load("visualization", "1", {
+            packages: ["corechart"]
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Месяц', ''],
+                ['Январь', 1],
+                ['Февраль', 3 ],
+                ['Март', 2],
+                ['Апрель', 10],
+                ['Май', 7],
+                ['Июнь', 12],
+                ['Июль', 0],
+                ['Август', 0],
+                ['Сентябрь',0],
+                ['Октябрь', 0],
+                ['Ноябрь', 0],
+                ['Декабрь',0],
+
+            ]);
+            var options = {
+                title: 'Заселение',
+                hAxis: {
+                    title: 'Месяц'
+                },
+                vAxis: {
+                    title: 'Количество людей'
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('oil1'));
+            chart.draw(data, options);
+        }
+    </script>
+    <br><br><br><br>
+    <div id="air" style="width: 800px; height: 400px; "></div>
+    <div id="oil" style="width: 1100px; height: 400px;position:absolute; top:100px; right:400px;"></div>
+    <div id="oil1" style="width: 1100px; height: 400px; position:absolute; top:500px; right:400px;"></div>
+
+</body></html>

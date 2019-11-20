@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>Hotel</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__fixed">
+                    <div class="header__center">
+                        <div class="header__logo" data-scroll="#intro">Hotel</div>
+                        <a class="nav__link" href="#" data-scroll="#about">-Все гости отеля-</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+<!--
+    <h1>Гости отеля</h1>
+    <label>
+        {% for rec in records %}
+        <p>Номер паспорта: {{rec[0]}}</p>
+        <p>Фамилия: {{rec[1]}}</p>
+        <p>Имя: {{rec[2]}}</p>
+        <p>Отчество: {{rec[3]}}</p>
+        <p>Пол: {{rec[4]}}</p>
+        <p>Телефон: {{rec[5]}}</p>
+        <p>Адрес электронной почты: {{rec[6]}}</p>
+        <p>Количество посещений: {{rec[7]}}</p>
+        <br><br><br>
+        {% end %}
+    </label>
+-->
+   <br><br><br><br><br><br> <a class="btn1" input type="submit" href="#">Назад</a><br><br><br>
+    <table>
+        <tr>
+           <th>Номер паспорта</th>
+            <th >Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Пол</th>     
+            <th>Телефон</th>
+            <th>Адрес электронной почты</th>
+            <th>Количество посещений</th>
+        </tr>
+                {% for rec in records %}
+
+        <tr>
+            <td>{{rec[0]}}</td>
+            <td>{{rec[1]}}</td>
+            <td>{{rec[2]}}</td>
+            <td>{{rec[3]}}</td>
+            <td>{{rec[4]}}</td>
+            <td>{{rec[5]}}</td>
+            <td>{{rec[6]}}</td>
+            <td>{{rec[7]}}</td>
+        </tr>
+  {% end %}
+    </table>
+</body></html>

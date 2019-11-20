@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<form id="formID" class="formular" method="post" action="http://localhost:8888/booking">
+
+    <body class="back">
+            <header class="header" id="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__fixed">
+                            <div class="header__center">
+                                <div class="header__logo" data-scroll="#intro">Hotel</div>
+                                <a class="nav__link" href="#" data-scroll="#about">Номер -БРОНИРОВАНИЕ НОМЕРА-</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <br> <br>
+        
+    <div class="book_num">
+       <h1>Бронирование номера: </h1>
+        <label >Дата заезда:</label>
+        <input class="vhod__name" type="date" name="date_in">
+        <div class="reserv">
+            <label>Дата выезда:</label>
+            <input class="vhod__name" type="date" name="date_out">
+        </div>
+        <p>Категория номера: </p>
+        <select class="vhod__name" name="type_room">
+            <option>Эконом</option>
+            <option>Стандарт</option>
+            <option>Комфорт</option>
+            <option>Люкс</option>
+            <option>Президентский</option>
+        </select>
+        <p>Количество комнат: </p>
+        <select class="vhod__name" name="room_num">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <p>Количество гостей: </p>
+        <select class="vhod__name" name="guest_num">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br>
+        <br>
+        <textarea class="vhod__name" placeholder="Введите дополнительные пожелания..." name="comm"></textarea>
+    </div>
+    <!-- <h1>Прайс-лист</h1> -->
+    <p class="text_vpn">Стоимость проживания:</p>
+    <table class="table_for_book1">
+        <tr><th>{{cost[0][0]}}</th>
+            <th>{{cost[1][0]}}</th>
+            <th>{{cost[2][0]}}</th>
+            <th>{{cost[3][0]}}</th>
+            <th>{{cost[4][0]}}</th>
+        </tr>
+        <tr>
+            <td>{{cost[0][1]}} руб/сут</td>
+            <td>{{cost[1][1]}} руб/сут</td>
+            <td>{{cost[2][1]}} руб/сут</td>
+            <td>{{cost[3][1]}} руб/сут</td>
+            <td>{{cost[4][1]}} руб/сут</td>
+        </tr>
+    </table>
+    <br> <br> <br> <br> <br> <br> <br>
+    <p class="text_vpn">Стоимость дополнительных услуг:</p> 
+    <table class="table_for_book2">
+        <tr><th>{{cost[5][0]}}</th>
+            <th>{{cost[6][0]}}</th>
+            <th>{{cost[7][0]}}</th>
+            <th>{{cost[8][0]}}</th>
+            <th>{{cost[9][0]}}</th>
+            <th>{{cost[10][0]}}</th>
+        </tr>
+        <tr>
+            <td>{{cost[5][1]}} руб</td>
+            <td>{{cost[6][1]}} руб</td>
+            <td>{{cost[7][1]}} руб</td>
+            <td>{{cost[8][1]}} руб/сут</td>
+            <td>{{cost[9][1]}} руб/сут</td>
+            <td>{{cost[10][1]}} руб/сут</td>
+        </tr>
+        </table>
+    <br>
+
+    <div class="book_dop">
+    <h1>Дополнительные опции:</h1>
+    <p>Трансфер из аэропорта до отеля</p>
+    <select class="vhod__name" name="trans_in">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <p>Трансфер из отеля до аэропорта</p>
+    <select class="vhod__name" name="trans_out">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <p>Бассейн</p>
+    <select class="vhod__name" name="exc">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <p>Питание (включает в себя обед и ужин)</p>
+    <select class="vhod__name" name="food">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <p>Фитнес</p>
+    <select class="vhod__name" name="fitness">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <p>Бар</p>
+    <select class="vhod__name" name="bar">
+        <option>Да</option>
+        <option>Нет</option>
+    </select>
+    <br>
+    <label>{{occupied}}</label>
+    <br>
+    <br>
+    </div>
+    <input class="btn_con1" type="submit" value="Продолжить">
+</body>
+</form></html>

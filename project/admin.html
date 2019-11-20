@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <title>Hotel</title>
+</head>
+
+<body class="back">
+    <form id="formID" class="formular" method="post" action="http://localhost:8888/allguests">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__fixed">
+                        <div class="header__center">
+                            <div class="header__logo" data-scroll="#intro">Hotel</div> <a class="nav__link" href="#" data-scroll="#about">-Администраторская панель-</a> </div>
+                        <nav class="nav" id="nav"> </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--<section class="section  section--clients">-->
+        <div class="oplata__1">
+            <div class="oplata">
+                <h1> Введите информацию о бронировании для оплаты: </h1>
+                <p>№ Документа: </p>
+                <input class="vhod__name" type="text" placeholder="№ Документа" name="pass_num">
+                <br>
+                <p>№ Договора о бронировании: </p>
+                <input class="vhod__name" type="text" placeholder="№ Договора о бронировании:" name="contract">
+                <br>
+                <br>
+                <label>Дата заезда:</label>
+                <input type="date" name="date_in">
+                <label>Дата выезда:</label>
+                <input type="date" name="date_out">
+                <br>
+                <br> </div>
+            <input type="submit" class="btn_opl" value="Оплатить проживание" formaction="http://localhost:8888/pay">
+        </div>
+        <!--<section class="section  section--clients">-->
+        <input type="submit" class="btn_adm1" value="Архив гостей" formaction="http://localhost:8888/allguests">
+        <br>
+        <br>
+        <br>
+        <input type="submit" class="btn_adm2" value="Гости, проживающие в отеле" formaction="http://localhost:8888/inguests">
+        <br>
+        <br>
+        <br>
+        <input type="submit" class="btn_adm2" value="Подтверждение бронирование" formaction="http://localhost:8888/confirm">
+    </form>
+</body>
+
+</html>

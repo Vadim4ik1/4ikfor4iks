@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<body class="back1">
+<form id="formID" class="formular" method="post" action="http://localhost:8888/excursion">
+   <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__fixed">
+                    <div class="header__center">
+                        <div class="header__logo" data-scroll="#intro">Hotel</div>
+                        <a class="nav__link" href="#" data-scroll="#about">Выбор экскурсии</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+                    <a class="btn_auuto" href="{{('autoion')}}" >Без экскурсии</a>
+                    <div id="column-1">
+    <div class="eks">
+            <img src="{{ static_url('logo/kazan1.jpg') }}" width="300px", height="300px" >
+
+        <p>Экскурсия : Базовая</p>
+     <p>Протяженность : 3км </p>
+     <p>Тип экскурсии : Пешеходная</p>
+     <p>Количество туристов : 10 человек</p>
+     <p>Время : 2 часа 30 минут</p>
+     <p>Цена : 2000руб</p>
+   
+                <input type="submit" class="btn_auto" value="Выбрать экскурсию" formaction = "http://localhost:8888/basic_excursion" >
+            </div></div>
+                <div id="column-2">
+    <div class="eks">
+            <img src="{{ static_url('logo/kazan2.jpg') }}" width="300px", height="300px" >
+
+     <p>Экскурсия : Средняя</p>
+     <p>Протяженность : 5км</p>
+     <p>Тип экскурсии : Пешеходная</p>
+     <p>Количество туристов : 8 человек</p>
+     <p>Время : 3 часа 30 минут</p>
+     <p>Цена : 3500руб</p>
+   
+                  <input type="submit" class="btn_auto" value="Выбрать экскурсию" formaction = "http://localhost:8888/sred_excursion" >
+                </div></div>
+                  <div id="column-3">
+       <div class="eks">
+            <img src="{{ static_url('logo/kazan3.jpg') }}" width="300px", height="300px" >
+<p>     Экскурсия : Повышенная</p>
+<p>     Протяженность : 8км</p>
+<p>     Тип экскурсии : Пешеходная-автомобильная</p>
+<p>     Количество туристов : 5 человек</p>
+<p>     Время : 5 часов</p>
+<p>     Цена : 5000руб</p>
+ 
+    
+            <input type="submit" class="btn_auto" value="Выбрать экскурсию" formaction = "http://localhost:8888/pov_excursion" >
+        </div></div>
+</form>
+</body>
+

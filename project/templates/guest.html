@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+    <body class="back">
+</head>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__fixed">
+                    <div class="header__center">
+                        <div class="header__logo" data-scroll="#intro">Hotel</div>
+                        <a class="nav__link" href="#" data-scroll="#about">-Заполнение заявки-</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+<form id="formID" class="formular" method="post" action="http://localhost:8888/guest">
+   <br><br><br><br>
+   <div class="info__guest">
+    <h1>Информация о госте: </h1>
+    <p>№ Документа: </p>
+    <input class="vhod__name" type = "text" placeholder = "№ Документа" name = "pass_num">
+    <p>Фамилия: </p>
+    <input class="vhod__name" type = "text" placeholder = "Фамилия" name = "f_name">
+    <p>Имя: </p>
+    <input class="vhod__name" type = "text" placeholder = "Имя" name = "l_name">
+    <p>Отчество: </p>
+    <input class="vhod__name" type = "text" placeholder = "Отчество" name = "o_name">
+    <p>Пол: </p>
+    <select name = "gender">
+        <option>женский</option>
+        <option>мужской</option>
+    </select>
+    <p>Номер телефона: </p>
+    <input class="vhod__name" type = "phone" placeholder = "Номер телефона" name = "phone">
+    <p>E-mail: </p>
+    <input class="vhod__name" type = "email" placeholder = "E-mail" name = "email">
+    <br>
+    <br>
+    <input class="btn_con" type="submit" value = "Продолжить">
+    </div>
+   
+    <h1>Информация о бронировании:</h1>
+    <table class="table1">
+        <tr><th>Категория номера</th>
+            <th>Количество гостей</th>
+            <th>Количество комнат</th></tr>
+        <tr>
+            <td>{{info[0]}}</td>
+            <td>{{info[1]}}</td>
+            <td>{{info[2]}}</td>
+        </tr>
+    </table>
+    <br> <br> <br> <br>
+    <h1>Дополнительные услуги:</h1> 
+    <table>
+            <tr><th>Трансфер из аэропорта до отеля</th>
+                <th>Трансфер из отеля до аэропорта</th>
+                <th>Обзорная экскурсия по городу</th>
+                <th>Питание (включает в себя обед и ужин)</th>
+                <th>Фитнес</th>
+                <th>Бар</th>
+            </tr>
+            <tr>
+                <td>{{info[5]}}</td>
+                <td>{{info[6]}}</td>
+                <td>{{info[7]}}</td>
+                <td>{{info[8]}}</td>
+                <td>{{info[9]}}</td>
+                <td>{{info[10]}}</td>
+            </tr>
+        </table>
+</form>
+    </body>
+</html>

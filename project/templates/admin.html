@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+    <body class="back">
+            <!-- <body class="back"> -->
+                    <header class="header1" id="header">
+                            <form id="formID" class="formular" method="post" action="http://localhost:8888/allrooms">
+                                <div class="container">
+                                    <div class="header__inner">
+                                        <div class="header__logo" data-scroll="#intro"><a href="{{('admin')}}"
+                                                class="nav__link">Адм.Панель</a></div>           
+                                        <ul class="nav">
+                                            <li><a href="#">Гости</a>
+                                                <ul>
+                                                    <li> </li>
+                    
+                                                    <li><a href="#"><input type="submit" class="nav__link1"
+                                                                value="ГОСТИ,ПРОЖИВАЮЩИЕ В ОТЕЛЕ"
+                                                                formaction="http://localhost:8888/inguests">
+                                                        </a></li>
+                                                    <li><input type="submit" class="nav__link1" value="АРХИВ ГОСТЕЙ"
+                                                            formaction="http://localhost:8888/allguests">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a>Бронирование</a>
+                                                <ul>
+                                                    <li><a href="{{('booking')}}">Забронировать номер</a></li>
+                                                    <li><input type="submit" class="nav__link1" value="ПОДТВЕРЖДЕНИЕ БРОНИ"
+                                                            formaction="http://localhost:8888/confirmation">
+                                                        </a>
+                    
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{('dopservices')}}"> Добавление услуг в номер </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{{('booking')}}">Номера</a>
+                                                <ul>
+                                                    <li><input type="submit" class="nav__link1" value="ЗАНЯТЫЕ НОМЕРА"
+                                                            formaction="http://localhost:8888/busyrooms"></li>
+                                                    <li> <input type="submit" class="nav__link1" value="СВОБОДНЫЕ НОМЕРА"
+                                                            formaction="http://localhost:8888/allrooms"></li>
+                                            </li>
+                                            <li>
+                                                <a href="{{('dopservices')}}"> Добавление услуг в номер </a>
+                                            </li>
+                                        </ul>
+                                        </li>
+                                        <li><a href="#">Услуги</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="{{('dopservices')}}">Просмотр услуг</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{('services')}}">Изменение стоимости услуг</a>
+                                                </li>
+                                        </li>
+                                        </ul>
+                                        <li><a href="#">Неисправность</a>
+                                            <ul>
+                                                    <li> <a href="{{('crash')}}">Заявка о неисправности</a></li>   
+                                                <li><input type="submit" class="nav__link1" value="НОМЕРА C НЕИСПРАВНОСТЯМИ"
+                                                        formaction="http://localhost:8888/crashrooms"></li>
+                                                <li> <input type="submit" class="nav__link1" value="ВЫБОР РЕМОНТНИКА НЕИСПВ."
+                                                        formaction="http://localhost:8888/crashconfirmation"></li>
+                                                <li><input type="submit" class="nav__link1" value="ПРИЕМ РАБОТ"
+                                                        formaction="http://localhost:8888/pri"></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{('statistic')}}">Статистика</a></li>
+                                        <li><a href="{{('/')}}">Выйти</a></li>
+                                        </ul>
+                                        <button class="nav-toggle" id="nav_toggle" type="button">
+                                            <span class="nav-toggle__item">Menu</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </header>
+            <!--<section class="section  section--clients">-->
+                
+                    <form id="formID" class="formular" method="post" action="http://localhost:8888/pay">
+            <div class="oplata__1">
+                <div class="oplata">
+                    <h1> Оплата проживания: </h1>
+                    <br>
+                    <p>№ Договора о бронировании: </p>
+                    <input class="vhod__name" type="text" placeholder="№ Договора о бронировании:" name="contract">
+                    <br>
+                    <br>
+                    <label>Дата заезда:</label>
+                    <input type="date" name="date_in">
+                    <label>Дата выезда:</label>
+                    <input type="date" name="date_out">
+                    <br>
+                    <br> 
+                </div>
+                <input type="submit" class="btn_opl" value="Оплатить проживание">
+            </div>
+            <!-- <input type="submit" class="btn_adm1" value="Архив гостей" formaction="http://localhost:8888/allguests"> -->
+        
+            <!-- <input type="submit" class="btn_adm2" value="Гости, проживающие в отеле" formaction="http://localhost:8888/inguests"> -->
+         
+    
+            <!-- <input type="submit" class="btn_adm3" value="Подтверждение бронирования" formaction="http://localhost:8888/confirmation"> -->
+    </section>
+</form>
+</body>
+</html>

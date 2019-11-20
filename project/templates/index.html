@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{static_url('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <title>Hotel</title>
+</head>
+<body>
+        <header class="header" id="header">
+                <div class="container">
+                    <div class="header__inner">
+                        <div class="header__logo" data-scroll="#intro">Hotel</div>
+            
+                        <nav class="nav" id="nav">
+                            <a class="nav__link" href="#" data-scroll="#about">Почему мы?</a>
+                            <a class="nav__link" href="#" data-scroll="#services">Про отель</a>
+                            <a class="nav__link" href="#" data-scroll="#works">Номера</a>
+                            <a class="nav__link" href="#" data-scroll="#blog">Доп.услуги</a>
+                            <a class="nav__link" href="{{('vhod')}}" >Адм.Панель</a>
+                        </nav>
+            
+                        <button class="nav-toggle" id="nav_toggle" type="button">
+                            <span class="nav-toggle__item">Menu</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            
+            
+            <div class="page">
+            
+                <!-- Intro -->
+                <div class="intro" id="intro">
+                    <div class="container">
+                        <div class="intro__inner">
+            <!--                <h2 class="intro__suptitle">Creatдлжive Template</h2>-->
+                            <h1 class="intro__title">Welcome to Hotel</h1>
+            
+                            <a class="btn" href="{{('booking')}}">Забронировать номер</a>
+                        </div>
+                    </div>
+            
+                    <div class="slider">
+                        <div class="container">
+                            </div>
+                        </div>
+                    </div>
+            
+                </div> 
+            
+            
+                <!-- About -->
+                <section class="section" id="about">
+                    <div class="container">
+            
+                        <div class="section__header">
+                            <h3 class="section__title">Почему именно наш отель ? </h3>
+            <!--                <h2 class="section__title">Story about us</h2>-->
+                            <div class="section__text">
+                                <p>Наш отель хорошо известен не только в Татарстане, но и далеко за его пределами. Комфортабельный, разноплановый и доступный европейский курорт в сердце 1000-летнего города, Это еще и идеальное решение для бизнеса и отдыха на любой вкус и любой бюджет. .</p>
+                            </div>
+                        </div>
+            
+                        <div class="card">
+                            <div class="card__item">
+                                <div class="card__inner">
+                                    <div class="card__img">
+                                        <img src="{{ static_url('images/about/1.jpg') }}" alt="">
+                                    </div>
+                                    <div class="card__text">Наш отель</div>
+                                </div>
+                            </div>
+            
+                            <div class="card__item">
+                                <div class="card__inner">
+                                    <div class="card__img">
+                                        <img src="{{ static_url('images/about/2.jpg') }}" alt="">
+                                    </div>
+                                    <div class="card__text">Наш отель</div>
+                                </div>
+                            </div>
+            
+                            <div class="card__item">
+                                <div class="card__inner">
+                                    <div class="card__img">
+                                        <img src="{{ static_url('images/about/3.jpg') }}" alt="">
+                                    </div>
+                                    <div class="card__text">Наш отель</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div><!-- /.container -->
+                </section>
+            
+                <!-- Services -->
+                <section class="section" id="services">
+                    <div class="container">
+            
+                        <div class="section__header">
+                            <h3 class="section__title">Про отель</h3>
+            <!--                <h2 class="section__title">Amazing Services</h2>-->
+                        </div>
+            
+                        <div class="services">
+                            <div class="services__item  services__item--border">
+                                <img class="services__icon" src="{{ static_url('images/services/photography.png') }}" alt="">
+            
+                                <div class="services__title">Зарядка</div>
+                                <div class="services__text">В 6 утра каждый день этот отель проводит бесплатную для всех жильцов зарядку, которая придает бодрости и тонуса на весь день.</div>
+                            </div>
+                            <div class="services__item  services__item--border">
+                                <img class="services__icon" src="{{ static_url('images/services/webdesign.png') }}" alt="">
+            
+                                <div class="services__title">Ресторан</div>
+                                <div class="services__text">Теперь можно не обходить все рестораны Казани в поисках того, который придется Вам по душе и удовлетворит Ваши гастрономические предпочтения, а выбрать наш .</div>
+                            </div>
+                            <div class="services__item  services__item--border">
+                                <img class="services__icon" src="{{ static_url('images/services/creativity.png') }}" alt="">
+            
+                                <div class="services__title">Спорт</div>
+                                <div class="services__text">Здесь Вы можете восстановить силы, укрепить свое здоровье и полностью расслабиться, погрузившись в приятный мир фитнеса и спорта. </div>
+                            </div>
+                            <div class="services__item">
+                                <img class="services__icon" src="{{ static_url('images/services/seo.png') }}" alt="">
+            
+                                <div class="services__title">Библиотека</div>
+                                <div class="services__text">В этом зале вы сможете найти покой и потерять себя среди книг,которые погрузят вас в любую атмосферу.</div>
+                            </div>
+                            <div class="services__item">
+                                <img class="services__icon" src="{{ static_url('images/services/css-html.png') }}" alt="">
+            
+                                <div class="services__title">Уют</div>
+                                <div class="services__text">Уют , именно это будет сопровождать вас всегда , когда вы будете на территории нашего отеля.</div>
+                            </div>
+                            <div class="services__item">
+                                <img class="services__icon" src="{{ static_url('images/services/digital.png') }}" alt="">
+            
+                                <div class="services__title">Тенисный корт</div>
+                                <div class="services__text">Спортивная самореализация людей, для которых активный образ жизни, движение, здоровье – не пустой звук. Время , которое вы там проведете пойдет только на пользу вашего иммунитета.</div>
+                            </div>
+                        </div>
+            
+                    </div><!-- /.container -->
+                </section>
+            
+                <!-- Works -->
+                <section class="section" id="works">
+                    <div class="container">
+                        <div class="section__header">
+                            <!-- <h3 class="section__suptitle">Номера</h3> -->
+                            <h2 class="section__title">Номера</h2>
+                            <div class="section__text">
+                                <p>Cветлый и уютный номер категории «Комфорт» оснащен всем необходимым для продуктивной  работы и полноценного отдыха.Из окон номера открывается чудесный вид на город..</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="works">
+                        <div class="works__col">
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/1.jpg') }}" alt="">
+                                <div class="works__info">
+                                    <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/2.jpg') }}" alt="">
+                                <div class="works__info">
+                                  <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="works__col">
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/7.jpg') }}" alt="">
+                                <div class="works__info">
+                                  <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/4.jpg') }}" alt="">
+                                <div class="works__info">
+                             <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="works__col">
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/5.jpg') }}" alt="">
+                                <div class="works__info">
+                                  <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="works__col">
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/6.jpg') }}" alt="">
+                                <div class="works__info">
+                                <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                            <div class="works__item">
+                                <img class="works__image" src="{{ static_url('images/works/3.jpg') }}" alt="">
+                                <div class="works__info">
+                                   <div class="works__title">Наш отель</div>
+                                    <div class="works__text">Номера</div>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div><!-- /.works -->
+                                               <br>
+                                                <a class="btn1" href="{{('Econom')}}">Подробнее</a>
+            
+                </section>
+                 
+                <section class="section  section--clients" id="blog">
+                <div class="section__header">
+                <h2 class="section__title"> Дополнительные услуги</h2>
+                    
+                <h3 >Здесь Вы можете : </h3></div>  
+                <div class="wrap">
+                <ol>
+                <li><span><b>Укрепить свое здоровье</b></span></li>
+                <li><span><b>Полностью расслабиться</b></span></li>
+                <li><span><b>Погрузиться в приятный мир фитнеса</b></span></li>
+                <li><span><b>Спокойно почитать книги</b></span></li>
+                <li><span><b>Приятно провести время</b></span></li>
+                <li><span><b>Очень вкусно и качественно покушать</b></span></li></ol>
+                <!-- <b>В фитнес-клубе созданы все условия для продуктивного отдыха: </b> -->
+            </div>
+                <!-- <ul class="column-3_1">
+                    <li>Фитнес зал</li>
+                    <li>Библиотека</li>
+                </ul>
+                <ul><li>Фитнес зал</li>
+                    <li>Библиотека</li>
+                </ul> -->
+            <div class="all">
+                    <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider1_1">
+                                <input checked type="radio" name="slider1_1" id="switch1">
+                                <input type="radio" name="slider1_1" id="switch2">
+                                <input type="radio" name="slider1_1" id="switch3">
+                                <input type="radio" name="slider1_1" id="switch4">
+                                <input type="radio" name="slider1_1" id="switch5">
+                            <div id="slides">
+                                <div id="overflow">
+                                    <div class="image">
+                                        <article><img src="{{ static_url('images/rest/1.jpg') }}"></article>
+                                        <article><img src="{{ static_url('images/rest/2.jpg') }}"></article>
+                                        <article><img src="{{ static_url('images/rest/3.jpg') }}"></article>
+                                        <article><img src="{{ static_url('images/rest/4.jpg') }}"></article>
+                                        <article><img src="{{ static_url('images/rest/5.jpg') }}"></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                                <label for="switch5"></label>
+                            </div>
+                        </article>
+                </div>
+            <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>      
+            <br>  
+            <!-- <a class="btn1" href="{{('Standart')}}">Подробнее</a>          -->
+                     </section>
+                    
+
+            <!-- <section class="section  section--clients">
+                <div class="section__header">
+                <h2 class="section__title"> Ресторан</h2>
+                <h3 >Наш отель порадует Вас русской, европейской, средиземноморской, японской, азиатской и национальной татарской кухней. </h3><br>
+                <b>У нашего ресторана есть общая цель – высокое качество блюд и профессиональное обслуживание. Теперь можно не обходить все рестораны города в поисках того, который придется Вам по душе и удовлетворит Ваши гастрономические предпочтения, </b>
+                    </div>  
+        </section> -->
+            <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>      
+            <!--  -------  -->
+                <!-- Map -->
+               <!-- <section class="section  section--map" id="footer"> -->
+                    <!--   -->
+            <!--    </section>-->
+             <!-- <section class="section  section--map" id="footer"> -->
+               <div class="infa">
+                    <div id="column-1_1">
+             <p> Контактная информация:</p>
+             <p>420126, Россия, Казань, Ул.Ново-Азинская д.45</p>
+             <p>Аквапарк справочная: +7 (843) 123-45-67</p>
+             <p> Аквапарк для групп: +7 (843) 123-45-67</p>
+             <p>Отель ресепшн: +7 (843) 67-45-123</p>
+             <p>Vadimmikhaylovskii@gmail.com</p>
+               </div></div>
+               <div id="column-2_1">
+                    <p> Использование текстов и фотографий данного сайта и других доменов, принадлежащих компании </p>
+                    <p>«Наш отель» допускается только с письменного разрешения компании «Наш </p>
+                    <p>Отель»</p>
+                    <p>2007-2019 </p>
+                    <p>© «Вадим Олегович»</p>
+                      </div></div>
+                      <div class="infa">
+                            <div id="column-3_1">
+                     <p> Контактная информация:</p>
+                     <p>420126, Россия, Казань, Ул.Ново-Азинская д.45</p>
+                     <p>Аквапарк справочная: +7 (843) 123-45-67</p>
+                     <p> Аквапарк для групп: +7 (843) 123-45-67</p>
+                     <p>Отель ресепшн: +7 (843) 67-45-123</p>
+                     <p>Vadimmikhaylovskii@gmail.com</p>
+                       </div></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script src="{{ static_url('js/app.js') }}"></script>
+            <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>      
+            
+</body>
+</html>            
